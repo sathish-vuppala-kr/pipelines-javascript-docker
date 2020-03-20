@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: sathishcodespipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sathishcodespipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sathishcodespipelinesjavascriptdocker 
+          image: mycontainerregistrysc.azurecr.io/sathishcodespipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
